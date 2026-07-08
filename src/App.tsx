@@ -48,7 +48,7 @@ function Header() {
           <a
             key={item}
             href={`#${item.toLowerCase()}`}
-            className="font-mono text-xs uppercase tracking-[0.28em] text-white/55 transition-colors hover:text-acid"
+            className="border border-white/10 bg-white/[0.035] px-3 py-2 font-mono text-xs uppercase tracking-[0.24em] text-white/72 backdrop-blur-md transition-all duration-200 ease-out hover:border-acid hover:bg-acid hover:text-black hover:shadow-[0_0_24px_rgba(204,255,0,0.24)]"
           >
             {item}
           </a>
@@ -91,7 +91,7 @@ function Hero() {
               <a
                 key={item}
                 href={item === "CUDA Python" ? "#research" : "#projects"}
-                className="border border-white/12 bg-white/[0.055] px-4 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-white/68 backdrop-blur-md transition-colors hover:border-acid hover:text-acid"
+                className="border border-white/18 bg-white/[0.055] px-4 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-white/76 backdrop-blur-md transition-all duration-200 ease-out hover:scale-[1.025] hover:border-white hover:bg-white hover:text-black hover:shadow-[0_0_28px_rgba(255,255,255,0.18)]"
               >
                 {item}
               </a>

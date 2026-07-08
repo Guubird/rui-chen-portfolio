@@ -14,12 +14,12 @@ export default function PointerField() {
 
     const handlePointerMove = (event: PointerEvent) => {
       const now = performance.now();
-      if (now - last < 420) {
+      if (now - last < 190) {
         return;
       }
       last = now;
 
-      if (layer.children.length > 4) {
+      if (layer.children.length > 7) {
         layer.firstElementChild?.remove();
       }
 
@@ -32,7 +32,7 @@ export default function PointerField() {
       const timeout = window.setTimeout(() => {
         ripple.remove();
         timeouts.delete(timeout);
-      }, 1200);
+      }, 1450);
       timeouts.add(timeout);
     };
 

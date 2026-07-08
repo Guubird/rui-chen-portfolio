@@ -4,7 +4,7 @@
 
 Rui Chen Portfolio is a high-end personal portfolio website for Rui Chen, a computer science student and early-stage builder focused on local-first macOS tools, AI-native software, and spatial computing experiments.
 
-The site uses a cinematic dark interface, oversized high-contrast typography, an acid-lime futuristic accent, a subtle pointer effect, and an abstract atmospheric 3D crystal instead of a portrait. It is intended to feel like a premium creative engineering portfolio, not a generic resume page.
+The site uses a cinematic dark interface, oversized high-contrast typography, an acid-lime futuristic accent, a subtle pointer effect, and an abstract Dot Wave Field hero background instead of a portrait. It is intended to feel like a premium creative engineering portfolio, not a generic resume page.
 
 ## Primary Goals
 
@@ -72,9 +72,19 @@ npm run preview
 
 Production-hardened first working version implemented.
 
-The app includes a responsive one-page portfolio, a cleaner centered hero, atmospheric Three.js crystal, lightweight circular pointer effect, selected project sections with real WorkTrace and ClipDock content, supporting research/certificate evidence, grouped technical stack, about, contact, and footer sections.
+The app includes a responsive one-page portfolio, a cleaner centered hero, atmospheric Three.js Dot Wave Field, lightweight circular pointer effect, selected project sections with real WorkTrace and ClipDock content, supporting research/certificate evidence, grouped technical stack, about, contact, and footer sections.
 
 The production hardening pass reduced unnecessary WebGL work, capped the crystal render cadence, lowered particle count and pixel ratio, paused rendering when the tab is hidden, strengthened cleanup for animation frames/listeners/WebGL resources, bounded pointer ripple DOM nodes and timers, and added a static reduced-motion fallback.
+
+The latest homepage interaction pass makes the top navigation more legible, adds intentional acid-lime hover feedback, strengthens Hero CTA hover states with white-fill inversion, and makes the pointer ripple more visible while keeping the effect lightweight and behind the content.
+
+The hero background has been revised from the earlier Crystal Memory object into a Dot Wave Field: a calm sea-like field of small glowing dots that breathe gently and create subtle pointer-responsive ripples behind the typography.
+
+The Dot Wave Field pointer response has been strengthened so normal mouse movement creates clearer water-like ripples, with nearby dots rising, brightening, and smoothly settling back into the calm field.
+
+The latest motion tuning softens the Dot Wave Field interaction into a calmer Apple-like response: lower ripple amplitude, softer brightness, smoother pointer damping, higher render cadence, and slower recovery.
+
+The final homepage polish refactors the Dot Wave Field into separated idle motion, pointer pressure, ripple, and renderer systems. Motion now runs at the display refresh rate with delta-time damping, lower interaction force, smoother afterglow, and reusable buffers for stable performance.
 
 Verified:
 
@@ -87,7 +97,7 @@ Verified:
 
 ## Implementation Notes
 
-- The hero uses an abstract 3D crystal instead of a human image.
+- The hero uses an abstract Dot Wave Field instead of a human image or central object.
 - The hero prioritizes Rui Chen's name, corrected identity line, short intro, and project tags.
 - WorkTrace and ClipDock are positioned as the strongest project proof.
 - Certificates and screenshots support credibility but are visually secondary.
@@ -105,3 +115,4 @@ Verified:
 - Add image lightbox behavior for certificates and SURF evidence.
 - Add a custom Open Graph image once a public domain and final visual asset are available.
 - Code split Three.js if bundle size becomes a deployment concern.
+- In the future, dots could become interactive memory/project nodes, such as linking to WorkTrace, ClipDock, VisionOS / AR, or GitHub project pages. Do not implement this yet.
