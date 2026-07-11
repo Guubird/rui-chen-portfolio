@@ -11,6 +11,14 @@ const fadeUp = {
   transition: { duration: 0.7, ease: "easeOut" },
 } as const;
 
+const FIVERR_GIG_URL = "https://www.fiverr.com/guubird/build-a-premium-interactive-portfolio-website-with-react-and-ai";
+
+const headerContactButtonClass =
+  "inline-flex h-11 items-center gap-2 border border-white/15 bg-white/5 px-3 font-mono text-[11px] uppercase tracking-[0.2em] text-white backdrop-blur-md transition-colors hover:border-acid hover:bg-acid hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-acid sm:px-4 sm:tracking-[0.22em]";
+
+const headerHireButtonClass =
+  "inline-flex h-11 items-center gap-2 border border-acid/70 bg-acid px-3 font-mono text-[11px] uppercase tracking-[0.2em] text-black shadow-[0_0_24px_rgba(204,255,0,0.18)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.02] hover:border-white hover:bg-white hover:text-black hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-acid sm:px-4 sm:tracking-[0.22em]";
+
 export default function App() {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-space text-white selection:bg-acid selection:text-black">
@@ -26,6 +34,7 @@ export default function App() {
         <Evidence />
         <Stack />
         <About />
+        <FreelanceCta />
         <Contact />
       </main>
 
@@ -54,13 +63,22 @@ function Header() {
           </a>
         ))}
       </nav>
-      <a
-        href="#contact"
-        className="inline-flex h-11 items-center gap-2 border border-white/15 bg-white/5 px-4 font-mono text-[11px] uppercase tracking-[0.22em] text-white backdrop-blur-md transition-colors hover:border-acid hover:bg-acid hover:text-black"
-      >
-        Contact
-        <ArrowUpRight className="h-4 w-4" />
-      </a>
+      <div className="flex items-center gap-2 sm:gap-3">
+        <a href="#contact" className={headerContactButtonClass}>
+          Contact
+          <ArrowUpRight className="h-4 w-4" />
+        </a>
+        <a
+          href={FIVERR_GIG_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Hire Rui Chen on Fiverr"
+          className={headerHireButtonClass}
+        >
+          Hire Me
+          <ArrowUpRight className="h-4 w-4" />
+        </a>
+      </div>
     </header>
   );
 }
@@ -259,6 +277,45 @@ function About() {
           </p>
         </motion.div>
       </div>
+    </section>
+  );
+}
+
+function FreelanceCta() {
+  return (
+    <section className="px-4 py-16 sm:px-6 lg:px-10">
+      <motion.div
+        {...fadeUp}
+        className="mx-auto flex max-w-[1500px] flex-col gap-6 border-y border-white/10 py-8 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <div>
+          <p className="font-mono text-[10px] uppercase tracking-[0.34em] text-acid sm:text-xs">
+            Available for select freelance projects
+          </p>
+          <p className="mt-3 max-w-2xl text-lg leading-7 text-white/68">
+            Need an interactive portfolio, landing page, or rapid web prototype?
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-3">
+          <a
+            href={FIVERR_GIG_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Hire Rui Chen on Fiverr for an interactive portfolio website"
+            className="inline-flex h-12 items-center gap-2 border border-acid/70 bg-acid px-4 font-mono text-[11px] uppercase tracking-[0.2em] text-black shadow-[0_0_24px_rgba(204,255,0,0.16)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.02] hover:border-white hover:bg-white hover:text-black hover:shadow-[0_0_30px_rgba(255,255,255,0.18)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-acid"
+          >
+            Hire Me on Fiverr
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex h-12 items-center gap-2 border border-white/15 bg-white/[0.045] px-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white backdrop-blur-md transition-colors hover:border-acid hover:bg-acid hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-acid"
+          >
+            Contact Me
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
+      </motion.div>
     </section>
   );
 }

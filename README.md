@@ -86,6 +86,8 @@ The latest motion tuning softens the Dot Wave Field interaction into a calmer Ap
 
 The final homepage polish refactors the Dot Wave Field into separated idle motion, pointer pressure, ripple, and renderer systems. Motion now runs at the display refresh rate with delta-time damping, lower interaction force, smoother afterglow, and reusable buffers for stable performance.
 
+The site now includes a Fiverr hiring path for freelance portfolio and rapid web prototype work. Visitors can use the header `HIRE ME` button or the compact freelance CTA near the bottom of the page to open Rui's Fiverr gig: `https://www.fiverr.com/guubird/build-a-premium-interactive-portfolio-website-with-react-and-ai`.
+
 Verified:
 
 - `npm install` completed.
@@ -104,6 +106,7 @@ Verified:
 - The site keeps the high-contrast cinematic inspiration from EathanPortfolio while using Rui-specific engineering language, structure, and content.
 - Reduced-motion CSS is included and the Three.js component reduces activity when users prefer reduced motion.
 - Contact email: `15980825997@163.com`.
+- Fiverr hire link: `https://www.fiverr.com/guubird/build-a-premium-interactive-portfolio-website-with-react-and-ai`.
 - Deployment notes are documented in `DEPLOYMENT.md`.
 
 ## Future Improvements

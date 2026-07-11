@@ -241,3 +241,21 @@ Vite reports a large JavaScript chunk because the first version bundles Three.js
 ### Verification
 
 - Ran `npm run build` successfully after the final homepage motion polish.
+
+## 2026-07-11: Fiverr Hire CTA
+
+### What Changed
+
+- Added a `HIRE ME` button beside the existing header Contact button.
+- Linked the new header CTA to Rui's Fiverr gig using a normal anchor with `target="_blank"` and `rel="noopener noreferrer"`.
+- Added a compact near-footer freelance CTA before the existing contact section with “Hire Me on Fiverr” and “Contact Me” actions.
+- Kept the existing visual identity, Dot Wave Field, typography, spacing, colors, navigation, lower-page content, and deployment settings unchanged.
+- Added visible focus styles to the new CTA anchors for keyboard accessibility.
+### Why
+
+- Gives visitors a clear commercial hiring path without turning the portfolio into a sales page.
+- Keeps Fiverr prominent enough for freelance conversion while preserving the premium cinematic portfolio tone.
+
+### Verification
+
+- Ran `npm run build` successfully after adding the Fiverr CTA.
